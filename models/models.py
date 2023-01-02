@@ -11,3 +11,11 @@ class Answer(db.Model):
 class Word(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     word = db.Column(db.String)
+
+def insert_question(question: Question):
+    db.session.add(question)
+    db.session.commit()
+
+def get_question(id):
+    question = Question.query.filter(Question.id == id).first()
+    return question
