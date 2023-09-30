@@ -1,9 +1,10 @@
 from flask import Flask
+from models.models import db
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://memory_server'
 
-db = SQLALchemy(app)
+db = (app)
 
 @app.route('/')
 def hello_world():
