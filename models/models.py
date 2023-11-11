@@ -7,3 +7,7 @@ class Question(db.Model):
 
 class Answer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+
+class Word(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    word = db.Column(db.String)
